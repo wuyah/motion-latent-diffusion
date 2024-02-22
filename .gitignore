@@ -1,0 +1,15 @@
+# checkpoints
+.ipynb_checkpoints
+
+# compilation
+*.pyc
+*.pyo
+
+# big files for results
+deps/smpl_models
+deps/t2m
+results
+checkpoints
+experiments
+clip-vit-large-patch14
+datasets

@@ -6,3 +6,6 @@ done
 
 # for single npy
 # /apdcephfs/share_1227775/shingxchen/libs/blender_bpy/blender-2.93.2-linux-x64/blender --background --python render.py -- --cfg=./configs/render_cx.yaml --npy=$1 --joint_type=HumanML3D 
+
+
+/root/autodl-tmp/blender/blender-2.93.18-linux-x64/2.93/python/bin/python3.9

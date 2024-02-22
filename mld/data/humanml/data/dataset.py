@@ -341,6 +341,7 @@ class Text2MotionDatasetV2(data.Dataset):
                                 # break
 
                 if flag:
+                    print("aaaa\n")
                     data_dict[name] = {
                         "motion": motion,
                         "length": len(motion),
@@ -350,10 +351,16 @@ class Text2MotionDatasetV2(data.Dataset):
                     length_list.append(len(motion))
                     # print(count)
                     count += 1
-                    # print(name)
-            except:
+                    print(name)
+            except Exception as e:
+                print(f"Exception: {e}")
+                exit(0)
                 pass
+        
+        print("id_list length: " + str(len(id_list)) + "\n")
 
+        assert len(length_list) > 0, "Ensure length_list is not empty."
+        assert len(new_name_list) > 0, "Ensure new_name_list is not empty"
         name_list, length_list = zip(
             *sorted(zip(new_name_list, length_list), key=lambda x: x[1]))
 

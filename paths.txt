@@ -1,0 +1,27 @@
+npy path:
+/root/autodl-tmp/motion-latent-diffusion/results/mld/1222_PELearn_Diff_Latent1_MEncDec49_MdiffEnc49_bs64_clip_uncond75_01/samples_2024-02-20-12-08-53
+
+vedio path:
+/root/autodl-tmp/motion-latent-diffusion/results/vedios
+
+temp_ply_folder:
+/root/autodl-tmp/motion-latent-diffusion/results/temp_ply_folder
+
+blender path:
+/root/autodl-tmp/blender/blender-2.93.18-linux-x64
+
+blender python path:
+/root/autodl-tmp/blender/blender-2.93.18-linux-x64/2.93/python/bin/python3.9
+
+install blender requirements:
+/root/autodl-tmp/blender/blender-2.93.18-linux-x64/2.93/python/bin/python3.9 -m pip install -r prepare/requirements_render.txt
+
+create SMPL meshes:
+python -m fit --dir /root/autodl-tmp/motion-latent-diffusion/results/mld/1222_PELearn_Diff_Latent1_MEncDec49_MdiffEnc49_bs64_clip_uncond75_01/samples_2024-02-20-12-08-53 --save_folder /root/autodl-tmp/motion-latent-diffusion/results/temp_ply_folder --cuda
+
+render one image:
+/root/autodl-tmp/blender/blender-2.93.18-linux-x64/blender --background --python render.py -- --cfg=./configs/render.yaml --dir=/root/autodl-tmp/motion-latent-diffusion/results/mld/1222_PELearn_Diff_Latent1_MEncDec49_MdiffEnc49_bs64_clip_uncond75_01/samples_2024-02-20-12-08-53 --mode=sequence --joint_type=HumanML3D
+
+/root/autodl-tmp/blender/blender-2.93.18-linux-x64/2.93/python/bin/python3.9 -m pip install -r prepare/requirements_render.txt
+
+Face_path:

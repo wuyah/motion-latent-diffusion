@@ -77,7 +77,7 @@ def main():
             joints_sample = torch.from_numpy(joints[frames]).float()
 
             features = model.transforms.joints2jfeats(joints_sample[None])
-            motion = xx
+            # motion = None
             # datastruct = model.transforms.Datastruct(features=features).to(model.device)
             cfg.DEMO.MOTION_TRANSFER = True
 

@@ -152,6 +152,11 @@ python -m test --cfg configs/config_mld_humanml3d.yaml --cfg_assets configs/asse
 Refer to [TEMOS-Rendering motions](https://github.com/Mathux/TEMOS) for blender setup, then install the following dependencies.
 
 ```
+My blender python path:
+/root/autodl-tmp/blender/blender-4.0.2-linux-x64/4.0/python
+```
+    
+```
 YOUR_BLENDER_PYTHON_PATH/python -m pip install -r prepare/requirements_render.txt
 ```
 

@@ -4,16 +4,18 @@ import shutil
 import sys
 from pathlib import Path
 
+sys.path.insert(0, os.path.expanduser("~/.local/lib/python3.9/site-packages"))
+
 import natsort
 
 try:
     import bpy
-
     sys.path.append(os.path.dirname(bpy.data.filepath))
 except ImportError:
     raise ImportError(
         "Blender is not properly installed or not launch properly. See README.md to have instruction on how to install and use blender."
     )
+
 
 import mld.launch.blender
 import mld.launch.prepare  # noqa
